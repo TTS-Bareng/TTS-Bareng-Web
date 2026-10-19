@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFC 25%, #F4F4F7 55%, #EEEEF3 85%, #E9E9EF 100%);
+    color: #0F172A;
+    min-height: 100vh;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    overflow-x: hidden;
+  }
+}
+
+/* Apple Liquid Glass Surface Material */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04), 0 2px 6px -2px rgba(0, 0, 0, 0.02);
+}
+
+.liquid-glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(170%);
+  -webkit-backdrop-filter: blur(20px) saturate(170%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.035), 0 4px 12px -2px rgba(0, 0, 0, 0.015);
+}
+
+.liquid-glass-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-glass-hover:hover {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(37, 99, 235, 0.2);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.06), 0 6px 16px -2px rgba(0, 0, 0, 0.025);
+  transform: translateY(-2px);
+}
+
+/* Subtle crosshatch crossword watermark texture (authentic, non-intrusive) */
+.crossword-bg-texture {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Seamless section faders */
+.section-fade-mask {
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+/* Gradient transition bridge: white → dark CTA */
+.section-bridge-dark {
+  background: linear-gradient(
+    to bottom,
+    #EEEEF3 0%,
+    #D8D8E0 20%,
+    #9494A0 45%,
+    #3d3d50 70%,
+    #0A0E1A 100%
+  );
+}
+
+/* Hero asset pedestal radial glow */
+.hero-asset-halo {
+  background: radial-gradient(
+    ellipse 75% 60% at 50% 60%,
+    rgba(37, 99, 235, 0.08) 0%,
+    rgba(99, 102, 241, 0.05) 40%,
+    transparent 75%
+  );
+}
+
