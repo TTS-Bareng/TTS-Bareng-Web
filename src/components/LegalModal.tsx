@@ -184,7 +184,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                       5. Kontak Pengembang &amp; Bantuan Privasi
                     </h4>
                     <p className="text-slate-400 text-xs leading-relaxed">
-                      Jika Anda memiliki pertanyaan terkait privasi data atau ingin mengajukan permohonan informasi, hubungi tim pengembang kami melalui email: <a href="mailto:halo@ttsbareng.com" className="text-sky-400 underline hover:text-sky-300">halo@ttsbareng.com</a>.
+                      Jika Anda memiliki pertanyaan terkait privasi data atau ingin mengajukan permohonan informasi, hubungi tim pengembang kami melalui email: <a href="mailto:mabar.tekatekisilang@gmail.com" className="text-sky-400 underline hover:text-sky-300">mabar.tekatekisilang@gmail.com</a>.
                     </p>
                   </div>
                 </div>
@@ -297,11 +297,11 @@ export const LegalModal: React.FC<LegalModalProps> = ({
           {/* Modal Footer */}
           <div className="px-6 py-4 border-t border-slate-800/80 bg-slate-950/40 flex items-center justify-between shrink-0">
             <a
-              href="mailto:halo@ttsbareng.com"
+              href="mailto:mabar.tekatekisilang@gmail.com"
               className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-sky-400" />
-              <span>Bantuan: halo@ttsbareng.com</span>
+              <span>Bantuan: mabar.tekatekisilang@gmail.com</span>
             </a>
 
             <button

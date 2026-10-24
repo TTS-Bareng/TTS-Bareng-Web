@@ -162,8 +162,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
                 >
                   Syarat &amp; Ketentuan
                 </button>
-                <a href="#faq" className="hover:text-white transition-colors">
-                  Pusat Bantuan
+                <a
+                  href="mailto:mabar.tekatekisilang@gmail.com"
+                  className="hover:text-sky-400 transition-colors"
+                >
+                  Dukungan CS: mabar.tekatekisilang@gmail.com
                 </a>
               </div>
             </div>
