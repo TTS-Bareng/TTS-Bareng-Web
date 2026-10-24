@@ -13,25 +13,31 @@ export const App: React.FC = () => {
   const [legalModalOpen, setLegalModalOpen] = useState(false);
   const [legalTab, setLegalTab] = useState<LegalTab>('privacy');
 
-  // Handle URL hash on load and hash change (#privacy, #terms, #kbbi)
+  // Handle URL hash and direct pathname on load (#privacy, /privacy, #terms, /terms, #kbbi)
   useEffect(() => {
-    const handleHash = () => {
+    const handleNavigation = () => {
       const hash = window.location.hash.toLowerCase();
-      if (hash === '#privacy') {
+      const path = window.location.pathname.toLowerCase().replace(/\/$/, '');
+
+      if (hash === '#privacy' || path === '/privacy' || path.endsWith('/privacy')) {
         setLegalTab('privacy');
         setLegalModalOpen(true);
-      } else if (hash === '#terms') {
+      } else if (hash === '#terms' || path === '/terms' || path.endsWith('/terms')) {
         setLegalTab('terms');
         setLegalModalOpen(true);
-      } else if (hash === '#kbbi' || hash === '#legal') {
+      } else if (hash === '#kbbi' || hash === '#legal' || path === '/kbbi' || path.endsWith('/kbbi')) {
         setLegalTab('kbbi');
         setLegalModalOpen(true);
       }
     };
 
-    handleHash();
-    window.addEventListener('hashchange', handleHash);
-    return () => window.removeEventListener('hashchange', handleHash);
+    handleNavigation();
+    window.addEventListener('hashchange', handleNavigation);
+    window.addEventListener('popstate', handleNavigation);
+    return () => {
+      window.removeEventListener('hashchange', handleNavigation);
+      window.removeEventListener('popstate', handleNavigation);
+    };
   }, []);
 
   const handleOpenLegal = (tab: LegalTab) => {

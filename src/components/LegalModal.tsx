@@ -29,9 +29,9 @@ export const LegalModal: React.FC<LegalModalProps> = ({
   }, [isOpen, activeTab]);
 
   const handleClose = () => {
-    // Clean hash on close without jumping
-    if (window.location.hash) {
-      history.pushState('', document.title, window.location.pathname + window.location.search);
+    // Clean hash & pathname on close without jumping
+    if (window.location.hash || (window.location.pathname !== '/' && window.location.pathname !== '')) {
+      history.pushState('', document.title, window.location.origin + '/');
     }
     onClose();
   };
