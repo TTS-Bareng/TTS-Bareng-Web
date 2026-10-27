@@ -1,7 +1,7 @@
 # WHITEPAPER: TTS BARENG (MABAR TEKA-TEKI SILANG)
-**Reinvensi Game Kata Klasik Indonesia dengan Sentuhan Apple Liquid Glass, Realtime Co-op & 1v1 Arena**
+**Reinvensi Game Kata Klasik Indonesia dengan Sentuhan Apple Liquid Glass, Realtime Co-op, 1v1 Arena & Studio Kreator**
 
-*Versi Dokumen: 1.0.0 | Tanggal: Oktober 2026 | Klasifikasi: Public Commercial Whitepaper*
+*Versi Dokumen: v1.0.49 | Tanggal: 27 Oktober 2026 | Klasifikasi: Public Commercial Whitepaper*
 
 ---
 
@@ -11,10 +11,11 @@
 
 Di era di mana mayoritas game kata dipenuhi iklan agresif (*hyper-casual ad spam*), mekanik bayar-untuk-menang (*pay-to-win*), serta visual yang berantakan, TTS Bareng hadir dengan pendekatan **Zen Tactile Luxury**:
 1. **Realtime Co-op ("Satu Papan Berdua")**: Bermain di satu kisi teka-teki secara langsung bersama sahabat, pasangan, atau keluarga hanya melalui satu tautan kamar atau pemindaian QR code tanpa perlu login rumit.
-2. **1v1 Arena (Tug-of-War & Speed Race)**: Mode kompetitif intensif adu kecerdasan dan kecepatan dalam merebut petak kata secara real-time.
-3. **Daily Rush 90s**: Tantangan serentak berskala nasional setiap pukul 00:00 WIB dengan audio detak jantung sub-bass prosedural dan papan peringkat nasional.
-4. **Kurasi 30 Alam Nusantara & 300 Level Progresif**: Konten edukatif terverifikasi KBBI dari tema rumah, kuliner, flora-fauna, hingga sains dan sejarah peradaban.
-5. **Estetika Apple Liquid Glass & Zero AI-Slop**: Tipografi bersih (Poppins), palet warna ketat (Strict Max 3-Color Palette), efek kaca optikal (*frosted blur*), haptic mikro prosedural, dan karakter maskot 3D plush berkualitas studio.
+2. **1v1 Arena (Tug-of-War & Speed Race)**: Mode kompetitif intensif adu kecerdasan dan kecepatan dalam merebut petak kata secara real-time dengan kalkulasi ELO rating dinamis.
+3. **Turnamen Komunitas & Klasemen Master ELO (Liga Catur)**: Turnamen bracket sistem gugur (*Knockout 4 & Knockout 8*) serentak dengan piala dan peringkat Master ELO nasional.
+4. **Studio Kreator TTS Sendiri**: Kanvas layar penuh untuk menciptakan teka-teki silang kustom, menghasilkan tautan deep link web resmi dan QR code instan untuk dibagikan ke teman/komunitas.
+5. **Kurasi 30 Alam Nusantara & 300 Level Progresif**: Konten edukatif terverifikasi KBBI dari tema rumah, kuliner, flora-fauna, hingga sains dan sejarah peradaban.
+6. **Estetika Apple Liquid Glass & Zero Native Pop-ups**: Tipografi bersih (Poppins), palet warna ketat (Strict Max 3-Color Palette & Theme CSS Variables), efek kaca optikal (*frosted blur*), haptic mikro prosedural, dialog konfirmasi kustom kaca cair, dan karakter maskot 3D plush berkualitas studio.
 
 ---
 
@@ -63,14 +64,19 @@ TTS Bareng dibangun di atas arsitektur *offline-first modern web stack* yang dik
 - **Live Collaborative Solving**: Ketika Teman A mengetik di petak 4 Mendatar, kursor dan huruf muncul seketika di layar Teman B lengkap dengan warna penanda asal solver.
 - **Mabar Reaction Tray & Pings**: Fitur kirim reaksi instan ekspresif dan balon ping untuk memberi sinyal petunjuk yang membutuhkan bantuan.
 
-### 4.3 1v1 Arena (Adu Cepat & Rebut Petak)
-- **Tug-of-War Score Bar**: Skor dinamis yang saling menarik antara dua pemain. Setiap kata yang dipecahkan terlebih dahulu akan mengklaim petak tersebut secara permanen.
-- **Pilihan Durasi & Putaran**: Konfigurasi pertandingan fleksibel (Best of 1, 3, atau 5 putaran) dengan pilihan durasi 60, 90, atau 120 detik per babak.
+### 4.3 1v1 Arena (Tug-of-War & Speed Race)
+- **Tug-of-War Score Bar**: Skor dinamis yang saling menarik antara dua pemain. Setiap kata yang dipecahkan terlebih dahulu akan mengklaim petak tersebut secara permanen dengan warna palet pemain.
+- **Kalkulasi Rating ELO Dinamis**: Rekap ronde tuntas menampilkan pemenang, evaluasi ELO delta, dan kenaikan tier master.
+- **Background Persistence**: Timer duel tetap berdetak secara global di atas navigasi utama jika pemain berganti tab.
 
-### 4.4 Daily Rush 90 Detik
-- **Sinkronisasi Nasional 00:00 WIB**: Setiap hari pada tengah malam waktu Indonesia Barat, seed teka-teki baru dirilis secara seragam di seluruh Nusantara.
-- **Atmospheric Tension**: Efek audio detak jantung sub-bass prosedural yang frekuensinya meningkat saat waktu tersisa 20 detik terakhir.
-- **Sistem Penilaian Komprehensif**: Menggabungkan skor kecepatan (*speed bonus*), tingkat akurasi (*zero mistake multiplier*), dan rekor streak hari berturut-turut.
+### 4.4 Turnamen Komunitas & Master ELO Liga Catur
+- **Sistem Bracket Gugur**: Dukungan lobi Knockout 4 dan Knockout 8 dengan simulasi bracket instan dan pengisian slot bot cerdas.
+- **Papan Peringkat Master**: Klasemen nasional resmi yang mengurutkan pemain berdasarkan kepiawaian ELO rating Liga Catur.
+
+### 4.5 Studio Kreator TTS Kustom
+- **Kanvas Penuh Kreator**: Pengguna dapat menyusun kata dan petunjuk sendiri secara bebas.
+- **Deep Link Base64**: Menghasilkan tautan web resmi publik (`https://tts-bareng-web.akashaaa-id.workers.dev`) dan QR code yang dapat langsung dimainkan oleh pemain lain tanpa login server.
+- **Koleksi 'TTS Kreasiku'**: Tersimpan persisten offline-first di profil pemain dengan opsi mainkan, bagikan, edit, atau hapus.
 
 ---
 
