@@ -8,10 +8,36 @@ import { FAQSection } from './components/FAQSection';
 import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
 import { LegalModal, type LegalTab } from './components/LegalModal';
+import { CustomCrosswordWebModal } from './components/CustomCrosswordWebModal';
 
 export const App: React.FC = () => {
   const [legalModalOpen, setLegalModalOpen] = useState(false);
   const [legalTab, setLegalTab] = useState<LegalTab>('privacy');
+
+  // Deep Link / Invite Modal state (?custom=..., ?tourney=..., ?room=...)
+  const [inviteModalOpen, setInviteModalOpen] = useState(false);
+  const [customParam, setCustomParam] = useState<string | null>(null);
+  const [tourneyParam, setTourneyParam] = useState<string | null>(null);
+  const [roomParam, setRoomParam] = useState<string | null>(null);
+
+  // Check URL query parameters for custom TTS, tournament, or mabar invitations
+  useEffect(() => {
+    try {
+      const searchParams = new URLSearchParams(window.location.search);
+      const c = searchParams.get('custom') || searchParams.get('tts');
+      const t = searchParams.get('tourney') || searchParams.get('cup');
+      const r = searchParams.get('room') || searchParams.get('join') || searchParams.get('kamar');
+
+      if (c || t || r) {
+        setCustomParam(c);
+        setTourneyParam(t);
+        setRoomParam(r);
+        setInviteModalOpen(true);
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
 
   // Handle URL hash and direct pathname on load (#privacy, /privacy, #terms, /terms, #kbbi)
   useEffect(() => {
@@ -74,6 +100,15 @@ export const App: React.FC = () => {
           isOpen={legalModalOpen}
           initialTab={legalTab}
           onClose={() => setLegalModalOpen(false)}
+        />
+
+        {/* 8. Deep Link & Custom Crossword App Launcher Modal */}
+        <CustomCrosswordWebModal
+          isOpen={inviteModalOpen}
+          customParam={customParam}
+          tourneyParam={tourneyParam}
+          roomParam={roomParam}
+          onClose={() => setInviteModalOpen(false)}
         />
       </div>
     </ToastProvider>
