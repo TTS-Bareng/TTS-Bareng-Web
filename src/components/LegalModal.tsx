@@ -235,7 +235,33 @@ export const LegalModal: React.FC<LegalModalProps> = ({
 
                   <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
                     <h4 className="font-bold text-white mb-1">
-                      4. Pembatasan Tanggung Jawab
+                      4. Konten Buatan Pengguna (UGC) &amp; Nol Toleransi (Apple Guideline 1.2)
+                    </h4>
+                    <p className="text-slate-400 text-xs leading-relaxed">
+                      TTS Bareng menerapkan kebijakan nol toleransi (*zero tolerance*) terhadap konten yang memuat kata kasar, pornografi, ujaran kebencian, SARA, atau konten terlarang pada fitur Studio Kreator (TTS Kustom). Pengguna dapat langsung melaporkan dan memblokir konten yang melanggar melalui tombol Lapor di dalam permainan. Pelanggar akan diblokir dari fitur pembuatan konten.
+                    </p>
+                  </div>
+
+                  <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+                    <h4 className="font-bold text-white mb-1">
+                      5. Ketentuan Pembelian &amp; Apple Standard EULA (Guideline 3.1.2)
+                    </h4>
+                    <p className="text-slate-400 text-xs leading-relaxed">
+                      Seluruh transaksi In-App Purchase dan langganan diperpanjang otomatis diatur berdasarkan Perjanjian Lisensi Standar Pengguna Akhir Apple. Anda dapat membaca ketentuan selengkapnya di{' '}
+                      <a
+                        href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sky-400 underline font-bold"
+                      >
+                        Apple Standard EULA
+                      </a>.
+                    </p>
+                  </div>
+
+                  <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+                    <h4 className="font-bold text-white mb-1">
+                      6. Pembatasan Tanggung Jawab
                     </h4>
                     <p className="text-slate-400 text-xs leading-relaxed">
                       Layanan game disediakan sebagaimana adanya (*as is*). Pengembang terus memperbarui dan menjaga stabilitas aplikasi, namun tidak bertanggung jawab atas kerugian perangkat keras akibat penggunaan di luar spesifikasi wajar.
