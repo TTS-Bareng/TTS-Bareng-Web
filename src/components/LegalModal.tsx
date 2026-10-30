@@ -138,26 +138,29 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                     </h3>
                   </div>
                   <p className="text-xs text-sky-200/90 leading-relaxed">
-                    Terakhir diperbarui: 19 Oktober 2026. TTS Bareng beroperasi dengan prinsip <strong>Privacy-First &amp; Local-First</strong> yang mengutamakan keamanan data pengguna dan memenuhi sepenuhnya pedoman privasi <strong>Apple App Store Guideline 5.1.1</strong>.
+                    Terakhir diperbarui: 30 Oktober 2026. Kebijakan ini menjelaskan penggunaan data dalam aplikasi TTS Bareng dan cara menghubungi kami mengenai privasi.
                   </p>
                 </div>
 
                 <div className="flex flex-col gap-2.5">
                   <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
                     <h4 className="font-bold text-white mb-1">
-                      1. Penyimpanan Data Lokal (On-Device Local Storage)
+                      1. Data Akun, Profil &amp; Penyimpanan Lokal
                     </h4>
                     <p className="text-slate-400 text-xs leading-relaxed">
-                      Progres bermain, perolehan bintang, status bab, dan lencana disimpan langsung di memori perangkat pengguna (<code>localStorage</code>) atau penyimpanan terisolasi aplikasi. Kami tidak menjual, menyewakan, atau membagikan riwayat permainan Anda ke broker data pihak ketiga mana pun.
+                      Progres bermain dan pengaturan dapat disimpan di perangkat. Jika Anda masuk dengan email, Apple, atau Google, informasi akun dan profil seperti nama pemain, avatar, pengenal akun, skor, progres, dan daftar teman dapat digunakan untuk autentikasi, sinkronisasi, dan papan peringkat. Supabase menyediakan layanan autentikasi, basis data, dan sinkronisasi untuk aplikasi ini.
                     </p>
                   </div>
 
                   <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
                     <h4 className="font-bold text-white mb-1">
-                      2. Sesi Bermain Bersama (Mabar Co-op &amp; 1v1 Battle)
+                      2. Permainan Bersama &amp; Pembelian
                     </h4>
                     <p className="text-slate-400 text-xs leading-relaxed">
-                      Sinkronisasi papan kata pada mode Mabar berlangsung secara langsung melalui saluran sementara (*ephemeral peer channel*). Ruang kamar dibuat dengan kode unik anonim dan seluruh status sesi otomatis dihapus saat sesi berakhir.
+                      Saat bermain bersama, nama pemain, kode ruang, dan aktivitas permainan dipertukarkan melalui layanan realtime Supabase. Pembelian dan langganan diproses oleh Apple; RevenueCat digunakan untuk memeriksa pembelian dan hak akses VIP. Informasi pembayaran dikelola oleh Apple dan tidak disimpan oleh aplikasi.
+                    </p>
+                    <p className="text-slate-400 text-xs leading-relaxed">
+                      Kreasi TTS yang diterbitkan beserta pengenal pembuat disimpan untuk moderasi sebelum dapat dibuka pemain lain. Laporan dan pilihan blokir digunakan untuk menangani penyalahgunaan. Blokir tamu disimpan pada perangkat, sedangkan blokir saat masuk juga disimpan pada akun. Hubungi dukungan untuk pertanyaan mengenai data moderasi.
                     </p>
                   </div>
 
@@ -166,7 +169,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                       3. Bebas Pelacak &amp; Iklan Pihak Ketiga (Zero Ad Tracking)
                     </h4>
                     <p className="text-slate-400 text-xs leading-relaxed">
-                      Aplikasi ini 100% bebas dari pelacak perilaku pengguna (no behavioral tracking) dan tidak menyertakan SDK periklanan pihak ketiga yang invasif.
+                      Aplikasi tidak menyertakan SDK iklan pihak ketiga. Penyedia layanan di atas memproses informasi yang diperlukan untuk menyediakan fitur mereka; silakan lihat kebijakan privasi masing-masing penyedia untuk informasi lebih lanjut.
                     </p>
                   </div>
 
@@ -175,7 +178,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                       4. Hak Penghapusan Akun &amp; Data (Apple Guideline 5.1.1v)
                     </h4>
                     <p className="text-slate-400 text-xs leading-relaxed">
-                      Setiap pengguna berhak menghapus profil dan seluruh data aplikasi kapan pun. Tombol <strong>Hapus Akun &amp; Data</strong> tersedia langsung di menu Pengaturan aplikasi untuk membersihkan seluruh data tanpa syarat.
+                      Anda dapat memulai penghapusan akun melalui <strong>Hapus Akun &amp; Data</strong> di Pengaturan aplikasi. Penghapusan akun tidak otomatis membatalkan langganan Apple; kelola atau batalkan langganan melalui pengaturan Apple ID. Jika memerlukan bantuan atau informasi tentang data yang disimpan, hubungi kami melalui alamat di bawah.
                     </p>
                   </div>
 
